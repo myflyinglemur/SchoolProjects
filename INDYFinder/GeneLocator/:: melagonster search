@@ -1,0 +1,54 @@
+// melagonster search 
+
+	File melaDir = new File("../Genomes/melagonster/melagonsterDNA")
+	int melalocation = searchSpecies("melagonster", melaDir )
+	listGenome(melagonster, melaDNA, melaLoc);
+
+
+public int searchSpecies (String species, File[] genome, File[] isoFile){
+		String name = species;
+		System.out.println("Now searching " + species)
+
+		// directory of species DNA
+		File [] speciesDNA = listDirectory(genome);
+
+		//directory of gene Isoforms
+		File[] isoforms = listDirectory(isoFile);
+
+		boolean geneLocated = false;
+		int dnaIndex = 0
+		int geneLocation = -1;
+
+			// searches until gene found or no more DNA
+			while (!geneLocated && dnaIndex < speciesDNA.length) {
+				// checks the most recently added DNA for gene
+				DNA speciesDNA = new DNA(speciesDNA[dnaIndex])
+
+				int isoformIndex = 0;
+
+				//searches this DNA for all isoforms untile a match is found
+				while (!geneLocated && isoformIndex < isoforms) {
+					gene` = listDirectory[isoformIndex]
+
+					geneLocated = speciesDNA.contains(isoforms[gene]) 
+
+					if (geneLocated) {
+						location = isoformIndex;
+					} else {
+						isoformIndex += 1;
+					}
+
+				}
+			}
+		return location
+	}
+
+
+		
+		//clears genome
+		melagonster.genome.clear();
+
+
+
+
+		
