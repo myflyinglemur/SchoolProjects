@@ -1,0 +1,1 @@
+A solver for the classic eight queens chess problem. The code explores possible responses until an answer is found.
